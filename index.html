@@ -130,13 +130,13 @@
             box-shadow: 0 30px 60px rgba(0,0,0,0.2);
         }
 
-        .hero-left p:first-child {
+        .hero-left h1 {
             font-size: 1.6rem;
             opacity: 0.75;
             margin-bottom: 0.75rem;
         }
 
-        .hero-left p:last-child {
+        .hero-left h2 {
             font-size: 3.4rem;
             font-weight: 700;
             color: #8b5cf6;
@@ -217,51 +217,69 @@
         }
 
         /* ===== CTA FORM ===== */
-section.CTA label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: inherit;
-    text-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
+        section.CTA label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: inherit;
+            text-shadow: 0 0 6px rgba(0,0,0,0.5);
+        }
 
-section.CTA input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1.5rem;
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
-    color: inherit;
-    font-size: 1rem;
-    outline: none;
-    backdrop-filter: blur(6px);
-    transition: all 0.3s ease;
-}
+        section.CTA input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            color: inherit;
+            font-size: 1rem;
+            outline: none;
+            backdrop-filter: blur(6px);
+            transition: all 0.3s ease;
+        }
 
-/* Focus state */
-section.CTA input:focus {
-    border-color: #8b5cf6;
-    background: rgba(139,92,246,0.1);
-    box-shadow: 0 0 15px rgba(139,92,246,0.5);
-}
+        /* Focus state */
+        section.CTA input:focus {
+            border-color: #8b5cf6;
+            background: rgba(139,92,246,0.1);
+            box-shadow: 0 0 15px rgba(139,92,246,0.5);
+        }
 
-/* Placeholder */
-section.CTA input::placeholder {
-    color: rgba(255,255,255,0.5);
-    font-style: italic;
-}
+        /* Placeholder */
+        section.CTA input::placeholder {
+            color: rgba(255,255,255,0.5);
+            font-style: italic;
+        }
 
-/* ===== LIGHT MODE FIXES ===== */
-body.light-mode section.CTA input {
-    background: rgba(0,0,0,0.05);
-    border-color: rgba(0,0,0,0.2);
-}
+        /* ===== LIGHT MODE FIXES ===== */
+        body.light-mode section.CTA input {
+            background: rgba(0,0,0,0.05);
+            border-color: rgba(0,0,0,0.2);
+        }
 
-body.light-mode section.CTA input::placeholder {
-    color: rgba(0,0,0,0.4);
-}
+        body.light-mode section.CTA input::placeholder {
+            color: rgba(0,0,0,0.4);
+        }
+
+        /* ===== CTA TEXT STYLING ===== */
+        section.CTA h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        section.CTA p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -271,7 +289,7 @@ body.light-mode section.CTA input::placeholder {
 <header class="section header">
     <div class="logo">
         <h1>VibeGPT</h1>
-        <div id="tagline">'AI That Understands The Room'</div>
+        <div id="tagline">'An AI that reads the vibe and tells you what to do next — instantly.'</div>
     </div>
     <button class="theme-toggle" id="themeToggle">🌞 Light Mode</button>
 </header>
@@ -281,15 +299,15 @@ body.light-mode section.CTA input::placeholder {
     <!-- HERO -->
     <section class="section hero">
         <div class="hero-left">
-            <p>Stop guessing the vibe</p>
-            <p>Let it feel for you</p>
+            <h1>Stop guessing the vibe</h1>
+            <h2>Because social anxiety shouldn’t be DLC.</h2>
         </div>
     </section>
 
     <!-- SKILLS / INFO -->
     <section class="section skills">
         <div class="skills-intro">
-            Our new AI model can detect the vibe of any room using your mic and camera
+            Uses optional audio + visual context to understand social situations
         </div>
 
         <ul class="skills-list">
@@ -303,13 +321,11 @@ body.light-mode section.CTA input::placeholder {
 
 <footer>
     <section class="section CTA">
-        <label for="username">What's your username:</label>
-        <input type="text" name="username" id="username">
-        <label for="tel">What's your phone number:</label>
-        <input type="tel" name="tel" id="tel">
-        <label for="email">What's your email:</label>
+        <h3>Be first to try VibeGPT</h3>
+        <p>Early access users help shape how it works.</p>
+        <label for="email">Get early access:</label>
         <input type="email" name="email" id="email">
-        <button class="skills-btn">See it in action</button>
+        <button class="skills-btn" onclick="document.querySelector('.CTA').scrollIntoView({behavior:'smooth'})">See it in action</button>
     </section>
 </footer>
 
