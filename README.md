@@ -50,6 +50,7 @@ VibeGPT is a sleek, futuristic landing page for an AI that can *detect the vibe*
 - Fully **responsive**, works on all major devices.
 - Designed with **user-friendly interaction** and futuristic vibes in mind.
 - Form currently doesn’t have backend integration—perfect for a demo landing page.
+- This isn't a real product
 
 ---
 
