@@ -215,6 +215,54 @@
             .section { padding: 5rem 8rem; }
             .hero-left p:last-child { font-size: 3.8rem; }
         }
+
+        /* ===== CTA FORM ===== */
+section.CTA label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: inherit;
+    text-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+section.CTA input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    color: inherit;
+    font-size: 1rem;
+    outline: none;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+/* Focus state */
+section.CTA input:focus {
+    border-color: #8b5cf6;
+    background: rgba(139,92,246,0.1);
+    box-shadow: 0 0 15px rgba(139,92,246,0.5);
+}
+
+/* Placeholder */
+section.CTA input::placeholder {
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+}
+
+/* ===== LIGHT MODE FIXES ===== */
+body.light-mode section.CTA input {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(0,0,0,0.2);
+}
+
+body.light-mode section.CTA input::placeholder {
+    color: rgba(0,0,0,0.4);
+}
+
     </style>
 </head>
 <body>
